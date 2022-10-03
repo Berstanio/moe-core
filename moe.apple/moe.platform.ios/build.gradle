@@ -72,3 +72,11 @@ spotless {
         eclipse().configFile('Eclipse_Adjusted_NatJGen.xml')
     }
 }
+
+compileJava {
+    //raise heap
+    options.fork = true
+    options.forkOptions.with {
+        memoryMaximumSize = "2048m"
+    }
+}
