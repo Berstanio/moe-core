@@ -60,8 +60,8 @@ for (target in [[name: 'ios', outputs: ["${external.natj.root}/natj-ios/build/xc
         def log = file("build/ext_natj_${target.name}.log")
         mkdir log.parentFile
         FileOutputStream ostream = new FileOutputStream(log);
-        setErrorOutput(ostream)
-        setStandardOutput(ostream)
+        //setErrorOutput(ostream)
+        //setStandardOutput(ostream)
     }
 
     task("ext_natj_${target.name}") {
